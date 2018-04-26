@@ -36,14 +36,5 @@ App
       NoteUpdateForm
 ```
 
-#### Test
-* Test NoteCreateForm
-  * Test your onChange handler
-  * Test your onSubmit handler
-* Test NoteItem
-  * Test the NoteItem's ability defined to remove a note from the App's state
-* Test NoteUpdateForm
-  * Test the NoteUpdatesForm's ability to update a note in the App's state
-
 ####  Documentation  
 Write a description of the project in your README.md
