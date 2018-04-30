@@ -1,0 +1,36 @@
+body {
+    background-color: aliceblue;
+}
+
+main {
+    ul {
+        li {
+            color: goldenrod;
+        }
+    }
+}
+
+nav {
+    ul {
+        padding-left: 0;
+        li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+}
+
+form {
+    input {
+        display: block;
+        margin: 5px 0;
+    }
+    text-area {
+        display: block;
+        margin: 5px 0;
+    }
+    button {
+        display: block;
+        margin: 5px 0;
+    }
+}
