@@ -11,3 +11,12 @@
 
 
 ## How to Use
+
+Component Layout
+``` 
+App
+  NoteCreateForm
+  NoteList
+    NoteItem
+      NoteUpdateForm
+```
