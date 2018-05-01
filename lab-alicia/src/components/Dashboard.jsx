@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import uuidv4 from 'uuid/v4';
 
 import NoteCreateForm from './NoteCreateForm.jsx';
 import NoteList from './NoteList.jsx';
@@ -19,7 +18,7 @@ class Dashboard extends React.Component {
 
   addNote(note) {
     let newNote = {
-      id: '',
+      id: note.id,
       editing: false,
       completed: false,
       title: note.title,
@@ -33,6 +32,7 @@ class Dashboard extends React.Component {
     this.state.notes = this.state.notes.filter(note => {
       return note.id !== id;
     });
+    
     this.setState({ notes: this.state.notes });
   }
 

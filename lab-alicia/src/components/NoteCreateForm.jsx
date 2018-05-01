@@ -1,4 +1,5 @@
 import React from "react";
+import uuidv4 from 'uuid/v4';
 
 class NoteCreateForm extends React.Component {
   constructor(props) {
@@ -9,9 +10,10 @@ class NoteCreateForm extends React.Component {
 
   handleSubmit(ev) {
     ev.preventDefault();
+    let id = uuidv4();
     let title = ev.target.title.value;
     let content = ev.target.content.value;
-    this.props.addNote({ title, content });
+    this.props.addNote({ id, title, content });
   }
 
   render() {
