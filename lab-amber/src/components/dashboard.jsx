@@ -25,9 +25,10 @@ class Dashboard extends React.Component{
   }
 
   removeNote(id) {
-    console.log('note to remove', id);
     let noteToRemove = this.state.notes.find(note => {
-      return note.id = id;
+      if (note.id === id) {
+        return note;
+      }
     });
     let noteIndex = this.state.notes.indexOf(noteToRemove);
     let newNoteArray = this.state.notes.slice();
@@ -37,7 +38,9 @@ class Dashboard extends React.Component{
 
   editNote(noteInfo, id) {
     let noteToUpdate = this.state.notes.find(note => {
-      return note.id = id;
+      if (note.id === id) {
+        return note;
+      }
     });
     let noteIndex = this.state.notes.indexOf(noteToUpdate);
     let newNoteArray = this.state.notes.slice();
