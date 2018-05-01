@@ -1,0 +1,35 @@
+
+nav {
+  ul {
+    padding-left: 0;
+    li {
+      display: inline;
+      margin-right: 10px;
+    }
+  }
+}
+
+form {
+  input {
+    display: block;
+    margin: 5px 0;
+  }
+  text-area {
+    display: block;
+    margin: 5px 0;
+  }
+  button {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+main {
+  ul {
+    li {
+      a {
+        color: red;
+      }
+    }
+  }
+}
