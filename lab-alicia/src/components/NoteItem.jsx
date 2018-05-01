@@ -39,6 +39,7 @@ class NoteItem extends React.Component {
     return <div onDoubleClick={this.toggleEdit}>
       <h2>{this.props.note.title}</h2>
       <h3>{this.props.note.content}</h3>
+      <h4>{this.props.note.id}</h4>
       <button onClick={this.handleRemove}>Remove</button>
       <button onClick={this.toggleEdit}>Edit</button>
     </div>
