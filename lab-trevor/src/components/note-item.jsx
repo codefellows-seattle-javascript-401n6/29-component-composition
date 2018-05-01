@@ -32,7 +32,8 @@ class NoteItem extends React.Component {
     if(this.state.isEditing) {
       return <UpdateNote title={this.props.content}
         content={this.props.content}
-        finishEdit={this.finishEdit}/>
+        finishEdit={this.finishEdit}
+        cancel={this.toggleEdit}/>
     }
     return <div onDoubleClick={this.toggleEdit}>
       <div>Title: {this.props.title}</div>

@@ -15,16 +15,19 @@ class UpdateNote extends React.Component {
   }
 
   render(){
-    return <form onSubmit={this.save}>
+    return <div>
+      <form onSubmit={this.save}>
       <div>Title: 
         <input type="text" name="title" placholder={this.props.title}/>
       </div>
 
-      <div>Content: {this.props.content}
+      <div>Content:
       <input type="text" name="content" placholder={this.props.content}/>
       </div>
       <button type="submit" value="SAVE">SAVE</button>
     </form>
+    <button onClick={this.props.cancel}>Cancel</button>
+    </div>
   }
 }
 
