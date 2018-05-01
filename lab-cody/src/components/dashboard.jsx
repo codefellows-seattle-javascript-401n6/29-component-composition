@@ -25,7 +25,7 @@ addNote(noteObj) {
 deleteNote(id) {
     console.log('note to delete', id);
     let noteToDelete = this.state.notes.find(note => {
-      return note.id = id;
+      return note.id === id;
     });
     let noteIndex = this.state.notes.indexOf(noteToDelete);
     this.state.notes.splice(noteIndex, 1);
