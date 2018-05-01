@@ -3,7 +3,7 @@
 ## Example of React's Component Composition
 
 ## Overview
-This is a simeple todo app example built with react. It contains a form component to add new todos. Each todo has it's own remove, edit and cancel buttonaactions.
+This is a simeple todo app example built with react. It contains a form component to add new todos. Each todo has it's own remove, edit and cancel button actions.
 
 ###### NoteUpdateForm 
 Component that receives a note through props and on
@@ -28,11 +28,3 @@ App
     NoteItem
       NoteUpdateForm
 ```
-
-## Technologies
-- Reactjs
-- Nodejs
-- Javascript
-- Html5
-- CSS3
-- SASS
