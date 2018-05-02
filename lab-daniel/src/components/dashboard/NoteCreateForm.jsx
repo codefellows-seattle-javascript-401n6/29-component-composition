@@ -32,6 +32,7 @@ class NoteCreateForm extends React.Component {
         this.setState({id: newId});
         this.props.newGoalFunc(this.state);
     }
+    
 
       
     render() {
@@ -42,6 +43,7 @@ class NoteCreateForm extends React.Component {
                     <input id="title" onChange={this.updateGoal} type="text" placeholder="Type goal here"/>
                     <input id="content" onChange={this.updateDetail} type="text" placeholder="Details about goal..."/>
                     <button id="add" type="submit">Add</button>
+
                 </form>
             </div>
         )

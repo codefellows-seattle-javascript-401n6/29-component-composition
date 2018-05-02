@@ -29,6 +29,7 @@ class Dashboard extends React.Component {
         })
         this.setState({ note: this.state.note })
     }
+
     render() {
         return (
             <main>
