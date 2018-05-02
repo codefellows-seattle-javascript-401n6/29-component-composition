@@ -11,17 +11,17 @@ class NoteCreateForm extends React.Component {
             content: '',
             completed: false
         }
-        this.updateGoal = this.updateGoal.bind(this);
-        this.updateDetail = this.updateDetail.bind(this);
+        this.setGoal = this.setGoal.bind(this);
+        this.setDetail = this.setDetail.bind(this);
         this.handleSubmit =  this.handleSubmit.bind(this);
     }
-    updateGoal(ev) {
+
+    setGoal(ev) {
         let setTitle = ev.target.value;
         this.setState({title: setTitle});
-
     }
 
-    updateDetail(ev) {
+    setDetail(ev) {
         let setDetail = ev.target.value;
         this.setState({content: setDetail});
     }
@@ -32,7 +32,6 @@ class NoteCreateForm extends React.Component {
         this.setState({id: newId});
         this.props.newGoalFunc(this.state);
     }
-    
 
       
     render() {
@@ -40,8 +39,8 @@ class NoteCreateForm extends React.Component {
             <div>
                 <p id="dashSubheader">ADD A NEW GOAL</p>
                 <form onSubmit={this.handleSubmit}>
-                    <input id="title" onChange={this.updateGoal} type="text" placeholder="Type goal here"/>
-                    <input id="content" onChange={this.updateDetail} type="text" placeholder="Details about goal..."/>
+                    <input id="title" onChange={this.setDetail} type="text" placeholder="Type goal here"/>
+                    <input id="content" onChange={this.setDetail} type="text" placeholder="Details about goal..."/>
                     <button id="add" type="submit">Add</button>
 
                 </form>

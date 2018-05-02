@@ -14,6 +14,7 @@ class Dashboard extends React.Component {
         }
         this.addGoal = this.addGoal.bind(this);
         this.removeGoal = this.removeGoal.bind(this);
+        this.updateGoal = this.updateGoal.bind(this);
     }
 
     addGoal(noteObj) {
@@ -30,11 +31,19 @@ class Dashboard extends React.Component {
         this.setState({ note: this.state.note })
     }
 
+    updateGoal(title, content, index) {
+        console.log('new title', title)
+        let newArray = [...this.state.notes];
+        newArray[index].title = title;
+        newArray[index].content = content;
+        this.setState({notes: newArray});
+      }
+
     render() {
         return (
             <main>
             <NoteCreateForm newGoalFunc={this.addGoal}></NoteCreateForm>
-            <NoteList notes={this.state.notes} removeGoal={this.removeGoal}></NoteList>
+            <NoteList notes={this.state.notes} removeGoal={this.removeGoal} updateGoal={this.updateGoal} ></NoteList>
             </main>
         )
     }
