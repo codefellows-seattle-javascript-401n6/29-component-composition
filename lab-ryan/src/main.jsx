@@ -9,14 +9,14 @@ import {
 
 import Landing from './components/landing.jsx';
 import Dashboard from './components/dashboard.jsx';
-
 import './style/main.scss';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: 'Notes App',
+            title: '',
+            content: ''
         }
     }
 
@@ -25,7 +25,7 @@ class App extends React.Component {
             <div>
                 <nav>
                     <ul>
-                        <li><Link to ="/">Landing</Link></li>
+                        <li><Link to ="/">Homepage</Link></li>
                         <li><Link to = "/dashboard">Dashboard</Link></li>
                     </ul>
                 </nav>

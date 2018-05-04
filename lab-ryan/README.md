@@ -1,22 +1,19 @@
-# Lab 29 Component Composition
+# Lab 28 TODO/Notes List Application
 
 ## Created by Ryan Johnson
 
 ##  Descriptsion
-
+Basic notes application built with react, allowing users to create and delete notes.
 
 ## Technologies
-* React
+* React.js
+* Node.js
+* javaScript
 * Webpack
-
+* SASS
 
 ## How to Use
-
-Component Layout
-``` 
-App
-  NoteCreateForm
-  NoteList
-    NoteItem
-      NoteUpdateForm
-```
+* clone the repo to your local directory
+* npm install //add all necessary dependencies
+* run npm run watch
+* open your localhose:8080 in your browser.

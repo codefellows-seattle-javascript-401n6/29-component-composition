@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import Dashboard from './dashboard.jsx';
 
 class Landing extends React.Component {
   constructor(props) {
@@ -7,8 +10,7 @@ class Landing extends React.Component {
 
   render() {
     return <div>
-      <p>Welcome to your Notes App.</p>
-      <p>Click on the Dashboard to View Create and Remove your notes.</p>
+      <p>Welcome to the Notes App!</p>
      </div>
   }
 }
