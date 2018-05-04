@@ -10,7 +10,6 @@ class NoteItem extends React.Component {
     }
 
     handleRemove(event) {
-        console.log('handleRemove', this.props.removeNote);
         return this.props.removeNote(this.props.index);
     }
 

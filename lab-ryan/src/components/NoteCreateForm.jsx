@@ -12,7 +12,6 @@ class NoteForm extends React.Component {
             completed: false
         
         }
-        console.log('NoteForm', this.state);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NoteItem from './noteItem.jsx';
+import NoteItem from './NoteItem.jsx';
 
 class NoteList extends React.Component {
     constructor(props) {
@@ -16,8 +16,6 @@ class NoteList extends React.Component {
                 note={note}
                 key={index}
                 index={index} />
-                
-                console.log('in allNotes checking removeNote', this.props.removeNote);
             });
         }
 
