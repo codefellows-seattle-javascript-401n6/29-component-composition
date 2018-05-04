@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Dashboard from './Dashboard.jsx';
+import Dashboard from './dashboard.jsx';
 
 class Landing extends React.Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NoteItem from './NoteItem.jsx';
+import NoteItem from './noteItem.jsx';
 
 class NoteList extends React.Component {
     constructor(props) {

@@ -7,9 +7,9 @@ import {
     Link
 } from 'react-router-dom';
 
-import Landing from './components/Landing.jsx';
-import Dashboard from './components/Dashboard.jsx';
-import './style/Main.scss';
+import Landing from './components/landing.jsx';
+import Dashboard from './components/dashboard.jsx';
+import './style/main.scss';
 
 class App extends React.Component {
     constructor(props) {
