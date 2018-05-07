@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import NoteItem from './noteItem.jsx';
-import NoteList from './noteList.jsx';
 import NoteCreateForm from './noteCreateForm.jsx';
+// import NoteItem from './noteItem.jsx';
+import NoteList from './noteList.jsx';
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -27,14 +27,11 @@ class Dashboard extends React.Component {
         }
         this.state.notes.push(newNote);
         this.setState({ notes: this.state.notes });
-        // console.log('addNote', this.state.notes);
-
     }
 
     removeNote(index) {
         this.state.notes.splice(index, 1);
         this.setState({ notes: this.state.notes });
-        console.log('removeNote', this.state.notes, index);
     }
 
     editNote(noteInfo, index) {

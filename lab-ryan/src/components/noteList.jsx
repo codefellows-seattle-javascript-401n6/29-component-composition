@@ -13,8 +13,10 @@ class NoteList extends React.Component {
         return this.props.notes.map((note, index) => {
             return<NoteItem 
                 removeNote={this.props.removeNote}
+                editNote={this.props.editNote}
                 note={note}
                 key={index}
+                id={note.id}
                 index={index} />
                 
                 console.log('in allNotes checking removeNote', this.props.removeNote);

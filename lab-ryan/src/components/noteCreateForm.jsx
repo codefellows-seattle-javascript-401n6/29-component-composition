@@ -14,6 +14,8 @@ class NoteCreateForm extends React.Component {
         let title = event.target.title.value;
         let content = event.target.content.value;
         this.props.addNote({ id, title, content });
+        event.target.reset();
+
     }
 
     render() {
@@ -27,7 +29,7 @@ class NoteCreateForm extends React.Component {
                 />
                 <input 
                     type="text"
-                    name="content"  
+                    name="content"
                 />
                 <button type="submit" 
                     value="Add Note">Add Note</button>
