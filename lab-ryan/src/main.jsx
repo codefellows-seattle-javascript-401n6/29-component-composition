@@ -9,6 +9,7 @@ import {
 
 import Landing from './components/landing.jsx';
 import Dashboard from './components/dashboard.jsx';
+
 import './style/main.scss';
 
 class App extends React.Component {

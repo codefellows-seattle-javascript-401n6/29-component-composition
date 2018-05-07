@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import NoteItem from './noteItem.jsx';
 import NoteList from './noteList.jsx';
-import NoteForm from './noteForm.jsx';
+import NoteCreateForm from './noteCreateForm.jsx';
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -14,12 +14,20 @@ class Dashboard extends React.Component {
 
         this.addNote = this.addNote.bind(this);
         this.removeNote = this.removeNote.bind(this);
+        this.editNote = this.editNote.bind(this);
     }
 
     addNote(note){
-        this.state.notes.push(note);
+        let newNote = {
+            id: note.id,
+            editing: false,
+            compleated: false,
+            title: note.title,
+            content: note.content
+        }
+        this.state.notes.push(newNote);
         this.setState({ notes: this.state.notes });
-        console.log('addNote', this.state.notes);
+        // console.log('addNote', this.state.notes);
 
     }
 
@@ -28,11 +36,20 @@ class Dashboard extends React.Component {
         this.setState({ notes: this.state.notes });
         console.log('removeNote', this.state.notes, index);
     }
+
+    editNote(noteInfo, index) {
+        let newArray = [...this.state.notes];
+        newArray[index].title = noteInfo.title;
+        newArray[index].content = noteInfo.content;
+        this.setState({ notes: newArray })
+
+    }
     
     render() {
         return <div>
-            <NoteForm addNote={this.addNote}></NoteForm>
+            <NoteCreateForm addNote={this.addNote}></NoteCreateForm>
             <NoteList removeNote={this.removeNote} 
+            editNote={this.editNote}
             notes={this.state.notes} />
         </div>
     }
